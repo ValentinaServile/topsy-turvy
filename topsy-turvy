@@ -1,0 +1,94 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+import sys
+
+charmap = {
+"a" : u"ɐ",
+"b" : u"q",
+"c" : u"ɔ",
+"d" : u"p",
+"e" : u"ǝ",
+"f" : u"ɟ",
+"g" : u"ƃ",
+"h" : u"ɥ",
+"i" : u"ᴉ",
+"j" : u"ɾ",
+"k" : u"ʞ",
+"l" : u"l",
+"m" : u"ɯ",
+"n" : u"u",
+"o" : u"o",
+"p" : u"d",
+"q" : u"b",
+"r" : u"ɹ",
+"s" : u"s",
+"t" : u"ʇ",
+"u" : u"n",
+"v" : u"ʌ",
+"w" : u"ʍ",
+"x" : u"x",
+"y" : u"ʎ",
+"z" : u"z",
+"A" : u"∀",
+"B" : u"B",
+"C" : u"Ɔ",
+"D" : u"D",
+"E" : u"Ǝ",
+"F" : u"Ⅎ",
+"G" : u"פ",
+"H" : u"H",
+"I" : u"I",
+"J" : u"ſ",
+"K" : u"K",
+"L" : u"˥",
+"M" : u"W",
+"N" : u"N",
+"O" : u"O",
+"P" : u"Ԁ",
+"Q" : u"Q",
+"R" : u"R",
+"S" : u"S",
+"T" : u"┴",
+"U" : u"∩",
+"V" : u"Λ",
+"W" : u"M",
+"X" : u"X",
+"Y" : u"⅄",
+"Z" : u"Z",
+"0" : u"0",
+"1" : u"Ɩ",
+"2" : u"ᄅ",
+"3" : u"Ɛ",
+"4" : u"ㄣ",
+"5" : u"ϛ",
+"6" : u"9",
+"7" : u"ㄥ",
+"8" : u"8",
+"9" : u"6",
+"?" : u"¿",
+"!" : u"¡",
+"(" : u")",
+")" : u"(",
+"[" : u"]",
+"]" : u"[",
+"{" : u"}",
+"}" : u"{",
+"<" : u">",
+">" : u"<",
+"&" : u"⅋",
+"_" : u"‾"
+}
+
+if (len(sys.argv) < 2):
+    sys.exit("No args :(")
+
+input = sys.argv[1]
+output = u""
+
+for char in input:
+  upside_down_char = charmap[char] if char in charmap else char
+  output += upside_down_char
+
+output = output[::-1]
+
+print output
