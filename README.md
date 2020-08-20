@@ -6,8 +6,24 @@ outputs
 
 ```sn oʇ ƃuolǝq ǝɹɐ ǝsɐq ɹnoʎ ll∀```
 
-## Set up
+## Usage
 
-- ```cp topsy-turvy /usr/local/bin/topsy-turvy```
+With argument:
 
-- ```chmod +x /usr/local/bin/topsy-turvy```
+``topsy-turvy "miao"``
+
+or
+
+``tt "miao"``
+
+With stdin:
+
+```echo "miao" | topsy-turvy ```
+
+or
+
+```echo "miao" | tt ```
+
+## Installation
+
+```brew tap valentinaservile/topsy-turvy && brew install topsy-turvy```
